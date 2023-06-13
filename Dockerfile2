@@ -4,5 +4,6 @@ RUN apt-get -y install python3-pip
 RUN apt-get -y install default-libmysqlclient-dev
 RUN pip3 install flask
 RUN pip3 install flask-mysqldb
-CMD /home/bob/.local/bin/flask --app app1.py run
+COPY app1.py app1.py
+CMD /usr/local/bin/flask --app app1.py run
 
